@@ -1,0 +1,38 @@
+<%- include('parts/top.ejs')%>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<form method="POST" action='/login'>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form>
+                <div class="mb-3">
+                    <input type="email" class="form-control" name="email" id="exampleInputEmail1" placeholder="Email">
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control" name="password"  id="exampleInputPassword1"  placeholder="Password">
+                </div>
+
+                <% if(messErr){ %>
+                    <div class="alert alert-danger d-flex align-items-center" role="alert">
+                        <%= messErr %>
+                    </div>
+                    <% } %>
+                    
+                  <!-- Submit button -->
+                <button type="submit" class="btn btn-primary">Login in</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<%-include('parts/bottom.ejs')%>
